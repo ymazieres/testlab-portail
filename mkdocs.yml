@@ -1,6 +1,6 @@
 site_name: Testlab
-site_dir: docs
-docs_dir: docs-md
+# site_dir: docs
+# docs_dir: docs-md
 theme:
   name: material
   language: fr
