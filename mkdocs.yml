@@ -1,0 +1,76 @@
+site_name: Testlab
+site_dir: docs
+docs_dir: docs-md
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+    - content.code.annotate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: cyan
+      # accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      # accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+markdown_extensions:
+  - def_list
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - footnotes
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.mark
+  - pymdownx.tilde
+  # - pymdownx.tasklist:
+  #     custom_checkbox: true
+  #     clickable_checkbox: true
+  - plantuml_markdown:
+      # server: http://127.0.0.1:8989
+      # server: http://www.plantuml.com/plantuml
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      clickable_checkbox: true
+
+plugins:
+  - awesome-pages
+  # - exclude:
+  #     glob:
+  #       - "docs-archives/**"
+  - search:
+      separator: '[\s\-,:!]+'
+      lang:
+        - fr
+        - en
+  - macros
+  - drawio-exporter:
+      cache_dir: "drawio-exporter"
+      drawio_executable: null
+#copyright: <font size=3> <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0 - Yannick Mazières </a></font>
+copyright: Copyright &copy; Yannick Mazières
